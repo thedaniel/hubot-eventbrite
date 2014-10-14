@@ -1,0 +1,20 @@
+{
+  "name": "hubot-eventbrite",
+  "version": "0.0.1",
+  "main": "index.coffee",
+  "description": "neurotically check on your eventbrite event",
+  "keywords": ["hubot", "hubot-scripts", "eventbrite"],
+  "author": "thedaniel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thedaniel/hubot-eventbrite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thedaniel/hubot-eventbrite/issues"
+  },
+  "homepage": "https://github.com/thedaniel/hubot-eventbrite",
+  "dependencies": {
+    "eventbrite": "0.1.6"
+  }
+}
