@@ -21,5 +21,8 @@ module.exports = (robot) ->
     else
       checkEventbrite (err, event) ->
         lines = [["#{ticketType.ticket.name}: #{ticketType.ticket.quantity_sold}"] for ticketType in event.tickets]
-        msg.send "#{event.title} (#{event.start_date.split(' ')[0]})"
-        [msg.send(line) for line in lines]
+        if process.env.HUBOT_SLACK_TOKEN? #lolslack
+          msg.send "..{ #{event.title} }.. #{lines.join ' - '}"
+        else
+          msg.send "#{event.title} (#{event.start_date.split(' ')[0]})"
+          [msg.send(line) for line in lines]
