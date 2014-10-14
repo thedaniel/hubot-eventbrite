@@ -1,9 +1,13 @@
 {
   "name": "hubot-eventbrite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.coffee",
   "description": "neurotically check on your eventbrite event",
-  "keywords": ["hubot", "hubot-scripts", "eventbrite"],
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "eventbrite"
+  ],
   "author": "thedaniel",
   "license": "MIT",
   "repository": {
