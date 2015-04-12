@@ -1,6 +1,6 @@
 {
   "name": "hubot-eventbrite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.coffee",
   "description": "neurotically check on your eventbrite event",
   "keywords": [
