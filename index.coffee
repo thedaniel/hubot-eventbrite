@@ -20,14 +20,10 @@ module.exports = (robot) ->
       return msg.send "You need to set up your Eventbrite API keys for this to work"
     else
       checkEventbrite (err, events) ->
-        lineGroups = []
-        out = ""
-
         for event in events
           lines = [["#{ticketType.ticket.name}: #{ticketType.ticket.quantity_sold}"] for ticketType in event.tickets]
           if process.env.HUBOT_SLACK_TOKEN? #lolslack
-            out.append "..{ #{event.title} }.. #{lines.join ' - '}\n"
+            msg.send "..{ #{event.title} }.. #{lines.join ' - '}"
           else
             msg.send "#{event.title} (#{event.start_date.split(' ')[0]})"
             [msg.send(line) for line in lines]
-        msg.send(out) if process.env.HUBOT_SLACK_TOKEN?
